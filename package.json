@@ -1,5 +1,5 @@
 {
-  "name": "env-topic",
+  "name": "env-tonic",
   "version": "1.0.0",
   "description": "Zero‑config, type‑safe environment variable loader for TypeScript projects.",
   "main": "dist/index.js",
