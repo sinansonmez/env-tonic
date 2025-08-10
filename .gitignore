@@ -1,0 +1,12 @@
+# .gitignore
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+.env
+package-lock.json
+.idea
+
+# LICENSE
+MIT License

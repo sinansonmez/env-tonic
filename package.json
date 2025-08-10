@@ -1,0 +1,58 @@
+{
+  "name": "env-topic",
+  "version": "1.0.0",
+  "description": "Zero‑config, type‑safe environment variable loader for TypeScript projects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "environment",
+    "env",
+    "dotenv",
+    "typescript",
+    "zod",
+    "validation",
+    "config"
+  ],
+  "author": "Sinan Chaush <sinansonmez@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinansonmez/env-tonic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sinansonmez/env-tonic/issues"
+  },
+  "bin": {
+    "envtonic": "./dist/index-cli.js"
+  },
+  "homepage": "https://github.com/sinansonmez/env-tonic#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.32.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^5.0.0",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
