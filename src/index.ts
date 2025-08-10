@@ -21,8 +21,14 @@ export async function loadEnv<T extends ZodTypeAny>(
   // 1️⃣ Parse the file with dotenv
   const parsed = dotenvConfig({ path: envPath }).parsed ?? {};
 
+  console.log("parsed: ", parsed)
+
   // 2️⃣ Merge with process.env (OS env vars override the file)
   const merged = { ...parsed, ...process.env };
+
+  console.log("process", process.env)
+
+  console.log("merged: ", merged)
 
   // 3️⃣ Validate
   const result = schema.safeParse(merged);
