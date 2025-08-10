@@ -1,6 +1,6 @@
 import path from "path";
 import { config as dotenvConfig } from "dotenv";
-import { z, ZodTypeAny, ZodError } from "zod";
+import { z, ZodTypeAny } from "zod";
 
 /**
  * Load and validate environment variables.
